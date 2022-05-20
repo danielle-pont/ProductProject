@@ -18,6 +18,7 @@ function addProduct(job, db = connection) {
   return db('products').insert(job, ['id'])
 }
 
+// Delete
 function deleteProduct(id, db = connection) {
   return db('products').del().where('id', id)
 }
