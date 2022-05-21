@@ -4,7 +4,17 @@ const router = express.Router()
 const db = require('../db/db')
 
 // route  GET /api/allProducts/:id
-// Gets a job by id
+router.get('/', (req, res) => {
+  db.getAllProducts()
+    .then((products) => {
+      res.json(products)
+    })
+    .catch((err) => {
+      res.status(500).send(err.message)
+    })
+})
+
+// Gets a product by id
 router.get('/:id', (req, res) => {
   const id = Number(req.params.id)
 
@@ -35,7 +45,7 @@ router.post('/', (req, res) => {
     })
 })
 
-// route  DELETE /api/jobs/:id
+// route  DELETE /api/allProducts/:id
 // Deletes a job by id
 router.delete('/:id', (req, res) => {
   const id = Number(req.params.id)

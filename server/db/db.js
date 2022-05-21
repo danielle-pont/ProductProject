@@ -3,11 +3,16 @@ const config = require('./knexfile')[environment]
 const connection = require('knex')(config)
 
 module.exports = {
+  getAllProducts,
   getProductById,
   addProduct,
   deleteProduct,
   getProductsByUserId,
   updateProductById,
+}
+
+function getAllProducts(id, db = connection) {
+  return db('products')
 }
 
 function getProductById(id, db = connection) {
