@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import AddTodo from './AddTodo'
 
 function App() {
   useEffect(() => {}, [])
@@ -7,8 +6,7 @@ function App() {
   return (
     <>
       <header className="header">
-        <h1>todos</h1>
-        <AddTodo />
+        <h1>Product Project</h1>
       </header>
       <section className="main"></section>
       <footer className="footer"></footer>
