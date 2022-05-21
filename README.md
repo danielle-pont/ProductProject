@@ -1,3 +1,4 @@
+Danielle Pont • Product Project
 A database of products and a space to review them.
 
 Front-end has been built using React, with Redux as a means of centralizing the state of the app.
