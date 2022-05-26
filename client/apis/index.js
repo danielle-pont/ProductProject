@@ -2,6 +2,7 @@ import request from 'superagent'
 
 // URLs
 const allProductsURL = '/api/allProducts'
+const myProductsURL = '/api/myProducts'
 
 // post a new product
 export function postProduct(product) {
@@ -26,4 +27,12 @@ export function getProductById(id) {
     .get(`/api/allProducts/${id}`)
     .then((res) => res.body)
     .catch((err) => console.log(err.status, 'error!'))
+}
+
+// get all products by user
+export function getUserProducts(userId) {
+  return request
+    .get(`${myProductsURL}/${userId}`)
+    .then((res) => res.body)
+    .catch((err) => console.log(err.status, 'error'))
 }
