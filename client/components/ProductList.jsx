@@ -6,7 +6,7 @@ function ProductList() {
   return (
     <>
       <header className="header">
-        <h1>Product Project</h1>
+        <h1>Here are all products:</h1>
       </header>
       <section className="main"></section>
       <footer className="footer"></footer>
