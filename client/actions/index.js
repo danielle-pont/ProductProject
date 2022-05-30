@@ -11,6 +11,7 @@ export const ADD_PRODUCT = 'ADD_PRODUCT'
 export const SET_PRODUCTS = 'SET_PRODUCTS'
 export const GET_PRODUCT_DETAILS = 'GET_PRODUCT_DETAILS'
 export const PRODUCT_LOADING = 'PRODUCT_LOADING'
+export const SET_ERROR = 'SET_ERROR'
 
 // Simple actions
 
@@ -44,6 +45,15 @@ export function requestUserProducts(products) {
   return {
     type: REQUEST_USER_PRODUCTS,
     payload: products,
+  }
+}
+
+// error handling
+
+export function setError(errMessage) {
+  return {
+    type: SET_ERROR,
+    payload: errMessage,
   }
 }
 
